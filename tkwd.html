@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insider</title>
+    <link rel="stylesheet" href="./mainpage.css">
+</head>
+<body>
+    <nav id="nav">
+        <ul class="left-ul">
+            <li><a href="">INSIDER</a></li>
+        </ul>
+        <div class="empty"></div>
+        <form action="login.php" method="post">
+            <ul class="right-ul">
+                <li>
+                    <select name="setting" class="nav-btn" id="options" onchange="run()">
+                        <option value="setting">Setting</option>
+                        <option value="logout"><a href="./index.html">Logout</a></option>
+                        <option value="delete">Delete Account</option>
+                    </select>
+                </li>
+            </ul>
+        </form>
+    </nav>
+    <div id="container">
+        
+    </div>
+
+    <div id="popupContact">
+        <form action="./delete.php" method="POST">
+            <div id="card">
+                <input type="text" id="email" name="phoneoremail" placeholder="Mobile number or Email">
+                <textarea name="description" id="details" cols="30" rows="10" placeholder="Reason to deactivate account"></textarea>
+                <button id="update" type="submit">Update Data</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="tkwd">
+        <h1><b>Taekwondo</b></h1><br>
+        <p><b>Taekwondo, Tae Kwon Do or Taekwon-Do is a Korean form of martial arts, characterized by punching and kicking techniques, with emphasis on head-height kicks, jumping spinning kicks, and fast kicking techniques. The literal translation for tae kwon do is "kicking," "punching," and "the art or way of."</b></p><br>
+        <p>There are six stages of Taekwondo,<br> 1)Beginner ➡ White belt, Yellow-Stripe<br> 2)Intermediate ➡ Yellow Belt, Green-Stripe, Green Belt<br> 3)Advanced ➡ Blue-Stripe, Blue Belt, Red-Stripe, Red Belt<br> 4)Junior Black-Belt ➡ 1, 2, 3 degree of Black Belt<br> 5)Master ➡ 4, 5, 6 degree of Black Belt<br> 6)Grand Master 7, 8, 9 degree of Black Belt</p>
+    </div>
+
+    <script>
+        function run(){
+            if(document.getElementById('options').value == "input");{
+                window.location.href = "./index.html"
+            }
+            if(document.getElementById('options').value == "delete");{
+                document.getElementById('popupContact').style.display = "block";
+            }
+            function closeDiv(){
+                document.getElementById('popupContact').style.display = "none";
+                window.location.href = "./mainpage.html"
+            }
+        }
+        </script>
+</body>
+</html>

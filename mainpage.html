@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insider</title>
+    <link rel="stylesheet" href="./mainpage.css">
+</head>
+<body>
+    <nav id="nav">
+        <ul class="left-ul">
+            <li><a href="">INSIDER</a></li>
+        </ul>
+        <div class="empty"></div>
+        <form action="login.php" method="post">
+            <ul class="right-ul">
+                <li>
+                    <select name="setting" class="nav-btn" id="options" onchange="run()">
+                        <option value="setting">Setting</option>
+                        <option value="logout"><a href="./index.html">Logout</a></option>
+                        <option value="delete">Delete Account</option>
+                    </select>
+                </li>
+            </ul>
+        </form>
+    </nav>
+    <div id="container">
+        
+    </div>
+
+    <div id="popupContact">
+        <form action="./delete.php" method="POST">
+            <div id="card">
+                <input type="text" id="email" name="phoneoremail" placeholder="Mobile number or Email">
+                <textarea name="description" id="details" cols="30" rows="10" placeholder="Reason to deactivate account"></textarea>
+                <button id="delete" type="submit">Delete</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="mart">
+        <h2>Martial Arts is a form of defense. In a difficult situation and your fight or flight response kicks in, Martial Arts can protect you!</h2>
+        <h4>Here is a link to learn more about Martial Arts!</h4>
+        <h1>⬇</h1>
+        <a href="https://en.wikipedia.org/wiki/Martial_arts">Click Here</a>
+        <h3>Or You Can Scroll Down to learn about Taekwondo</h3>
+        <h1>⏬</h1>
+        <li class="tkwd"><a href="./tkwd.html">Taekwondo</a></li>
+    </div>
+
+    <script>
+        function run(){
+            if(document.getElementById('options').value == "input");{
+                window.location.href = "./index.html"
+            }
+            if(document.getElementById('options').value == "delete");{
+                document.getElementById('popupContact').style.display = "block";
+            }
+            function closeDiv(){
+                document.getElementById('popupContact').style.display = "none";
+                window.location.href = "./mainpage.html"
+            }
+        }
+        </script>
+</body>
+</html>
